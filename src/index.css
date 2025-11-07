@@ -1,3 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap");
 
 @import "tailwindcss";
+
+body,
+a,
+button {
+  cursor: url("/logo-cursor.png") 12 12, pointer;
+}

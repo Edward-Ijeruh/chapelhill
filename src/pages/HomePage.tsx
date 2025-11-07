@@ -14,6 +14,7 @@ import sectionFiveImgOne from "../assets/images/homepage/section-5-img-1.jpg";
 import sectionFiveImgTwo from "../assets/images/homepage/section-5-img-2.jpg";
 import sectionFiveImgThree from "../assets/images/homepage/section-5-img-3.jpg";
 import sectionSixImg from "../assets/images/homepage/section-6-img.png";
+import ceo from "../assets/images/homepage/ceo.jpg";
 
 export default function HomePage() {
   return (
@@ -98,6 +99,84 @@ export default function HomePage() {
           }}
         >
           <ChevronDown size={20} className="text-white opacity-90" />
+        </motion.div>
+      </section>
+
+      {/* Founder Philosophy */}
+      <section className="bg-white text-[#0D1B1E] py-24 px-6 md:px-12 lg:px-24">
+        <motion.div
+          className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          {/* Founder Image */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <img
+              src={ceo}
+              alt="Founder Portrait"
+              className="w-full h-auto rounded-xl object-cover shadow-lg"
+            />
+          </motion.div>
+
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <p
+              className="text-xs mb-4 font-bold"
+              style={{ letterSpacing: "0.08em" }}
+            >
+              BEYOND INVESTING
+            </p>
+
+            <h2
+              className="text-3xl md:text-4xl leading-tight mb-8"
+              style={{
+                fontFamily: '"Roboto Serif", serif',
+                letterSpacing: "-0.5px",
+              }}
+            >
+              A Deep-Rooted Philosophy
+            </h2>
+
+            <p
+              className="text-sm md:text-base leading-relaxed mb-8"
+              style={{
+                fontFamily: '"DM Sans", sans-serif',
+                letterSpacing: "-0.3px",
+              }}
+            >
+              “Over the next decade, less than 1% of the capital managed by
+              global institutional asset managers can change the course of
+              Africa’s economic and social history, support the planet’s route
+              to zero carbon, and lift more than a billion people out of
+              poverty. A prosperous Africa can feed the world, resource the
+              world, and reverse the migration. The foundation for delivering
+              this outcome is in accelerating the rate of investment into
+              low-carbon, resilient infrastructure across Africa.”
+            </p>
+
+            <p
+              className="text-sm md:text-base font-semibold"
+              style={{
+                fontFamily: '"DM Sans", sans-serif',
+                letterSpacing: "-0.3px",
+              }}
+            >
+              - Bolaji Balogun <br />
+              Chief Executive Officer, Chapel Hill Denham.
+            </p>
+          </motion.div>
         </motion.div>
       </section>
 
@@ -236,122 +315,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Financial Advisory */}
-      <section className="bg-white text-[#0D1B1E] py-20 px-6 md:px-12 lg:px-24">
-        <motion.div
-          className="max-w-7xl mx-auto grid md:grid-cols-[0.9fr_1.1fr] gap-16 items-center"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          {/* Left image */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <img
-              src={sectionThreeImgOne}
-              alt="Financial Advisory"
-              className="w-full h-auto rounded-xl object-cover"
-            />
-          </motion.div>
-
-          {/* Right content */}
-          <motion.div
-            className="flex flex-col justify-between h-full"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.1, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            {/* Top */}
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              {/* Left text column */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                viewport={{ once: true }}
-              >
-                <p
-                  className="text-xs mb-4 font-bold"
-                  style={{ letterSpacing: "0.05em" }}
-                >
-                  DEEP DIVE
-                </p>
-
-                <h2
-                  className="text-3xl leading-tight mb-6"
-                  style={{ fontFamily: '"Roboto Serif", serif' }}
-                >
-                  FINANCIAL <br />
-                  ADVISORY THAT <br />
-                  TRANSFORMS <br />
-                  YOUR INVESTMENT <br />
-                  STRATEGY
-                </h2>
-              </motion.div>
-
-              {/* Right image column */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
-                viewport={{ once: true }}
-              >
-                <img
-                  src={sectionThreeImgTwo}
-                  alt="Financial Advisory Session"
-                  className="w-full h-auto rounded-xl object-cover"
-                />
-              </motion.div>
-            </div>
-
-            {/* Bottom column */}
-            <motion.div
-              className="mt-16 text-sm md:text-md leading-relaxed text-black max-w-md"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: "-0.5px",
-              }}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              <p>
-                Our financial advisory services provide comprehensive analysis
-                and personalized recommendations. We leverage advanced analytics
-                and deep market understanding to craft innovative investment
-                solutions.
-              </p>
-
-              {/* Buttons */}
-              <div className="mt-6 flex gap-3">
-                <button className="border border-black px-4 py-2 rounded-full text-sm md:text-md hover:bg-black hover:text-white transition cursor-pointer">
-                  Learn more
-                </button>
-
-                <button className="group inline-flex items-center gap-2 px-5 py-2 text-sm md:text-md text-black rounded-sm transition-all duration-300 hover:opacity-80 cursor-pointer">
-                  Contact
-                  <ChevronRight
-                    size={16}
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  />
-                </button>
-              </div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </section>
-
       {/* Consultation Steps */}
-      <section className="bg-[#955c28] text-white py-20 px-6 md:px-12 lg:px-24">
-        <div className="max-w-7xl mx-auto flex flex-col divide-y divide-white/50">
-          {/* Step 1 */}
+      <section className="bg-[#955c28] text-white py-20 ">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          {/* STEP 1 */}
           <motion.div
             className="relative py-16 flex flex-col md:flex-row items-center gap-12"
             initial={{ opacity: 0, y: 40 }}
@@ -368,14 +335,14 @@ export default function HomePage() {
               }}
             >
               <span className="text-sm font-bold">01</span>
-              <span className="text-sm font-bold">Initial consultation</span>
+              <span className="text-sm font-bold">Initial Consultation</span>
             </div>
 
-            {/* Left text */}
+            {/* Left */}
             <div className="flex-1">
               <p className="text-sm mb-3">DISCOVERY</p>
               <h2
-                className="text-3xl md:text-3xl lg:text-4xl leading-tight mb-4"
+                className="text-3xl md:text-4xl leading-tight mb-4"
                 style={{
                   fontFamily: '"Roboto Serif", serif',
                   letterSpacing: "-0.5px",
@@ -391,24 +358,24 @@ export default function HomePage() {
                 }}
               >
                 We begin by conducting an in-depth analysis of your current
-                financial situation, risk tolerance, and long-term objetives.
+                financial situation, risk tolerance, and long-term objectives.
               </p>
 
               <div className="mt-6 flex gap-3">
-                <button className="border border-white px-4 py-2 rounded-full text-sm md:text-md hover:bg-white hover:text-black transition cursor-pointer">
+                <button className="border border-white px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
                   Learn more
                 </button>
-                <button className="group inline-flex items-center gap-2 px-5 py-2 text-sm md:text-md text-white rounded-sm transition-all duration-300 hover:opacity-80 cursor-pointer">
+                <button className="group inline-flex items-center gap-2 px-5 py-2 text-sm hover:opacity-80 transition">
                   Contact
                   <ChevronRight
                     size={16}
-                    className="transition-transform duration-300 group-hover:translate-x-1"
+                    className="group-hover:translate-x-1 transition-transform"
                   />
                 </button>
               </div>
             </div>
 
-            {/* Right image */}
+            {/* Right */}
             <div className="flex-1 flex justify-end">
               <img
                 src={sectionFourImgOne}
@@ -417,8 +384,13 @@ export default function HomePage() {
               />
             </div>
           </motion.div>
+        </div>
 
-          {/* Step 2 */}
+        {/* Divider */}
+        <div className="w-full h-px bg-white/40"></div>
+
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          {/* STEP 2 */}
           <motion.div
             className="relative py-16 flex flex-col md:flex-row items-center gap-12"
             initial={{ opacity: 0, y: 40 }}
@@ -440,7 +412,7 @@ export default function HomePage() {
             <div className="flex-1">
               <p className="text-sm mb-3">DESIGN</p>
               <h2
-                className="text-3xl md:text-3xl lg:text-4xl leading-tight mb-4"
+                className="text-3xl md:text-4xl leading-tight mb-4"
                 style={{
                   fontFamily: '"Roboto Serif", serif',
                   letterSpacing: "-0.5px",
@@ -456,18 +428,18 @@ export default function HomePage() {
                 }}
               >
                 Our experts develop a customized investment strategy aligned
-                with your specific financial goals and risk profile.
+                with your financial goals.
               </p>
 
               <div className="mt-6 flex gap-3">
-                <button className="border border-white px-4 py-2 rounded-full text-sm md:text-md hover:bg-white hover:text-black transition cursor-pointer">
+                <button className="border border-white px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
                   Learn more
                 </button>
-                <button className="group inline-flex items-center gap-2 px-5 py-2 text-sm md:text-md text-white rounded-sm transition-all duration-300 hover:opacity-80 cursor-pointer">
+                <button className="group inline-flex items-center gap-2 px-5 py-2 text-sm hover:opacity-80 transition">
                   Contact
                   <ChevronRight
                     size={16}
-                    className="transition-transform duration-300 group-hover:translate-x-1"
+                    className="group-hover:translate-x-1 transition-transform"
                   />
                 </button>
               </div>
@@ -481,8 +453,13 @@ export default function HomePage() {
               />
             </div>
           </motion.div>
+        </div>
 
-          {/* Step 3 */}
+        {/* Divider */}
+        <div className="w-full h-px bg-white/40"></div>
+
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          {/* STEP 3 */}
           <motion.div
             className="relative py-16 flex flex-col md:flex-row items-center gap-12"
             initial={{ opacity: 0, y: 40 }}
@@ -504,13 +481,13 @@ export default function HomePage() {
             <div className="flex-1">
               <p className="text-sm mb-3">EXECUTION</p>
               <h2
-                className="text-3xl md:text-3xl lg:text-4xl leading-tight mb-4"
+                className="text-3xl md:text-4xl leading-tight mb-4"
                 style={{
                   fontFamily: '"Roboto Serif", serif',
                   letterSpacing: "-0.5px",
                 }}
               >
-                CONTINUOUS MONITORING AND ADAPTIVE STRATEGIES
+                CONTINUOUS MONITORING & ADAPTIVE STRATEGIES
               </h2>
               <p
                 className="text-sm leading-relaxed max-w-md"
@@ -519,20 +496,19 @@ export default function HomePage() {
                   letterSpacing: "-0.5px",
                 }}
               >
-                We provide continuous portfolio optimization, regular
-                performance reviews, and proactive adjustments to maximize your
-                investment potential.
+                We track performance and adjust strategies proactively to
+                maximize return.
               </p>
 
               <div className="mt-6 flex gap-3">
-                <button className="border border-white px-4 py-2 rounded-full text-sm md:text-md hover:bg-white hover:text-black transition cursor-pointer">
+                <button className="border border-white px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
                   Learn more
                 </button>
-                <button className="group inline-flex items-center gap-2 px-5 py-2 text-sm md:text-md text-white rounded-sm transition-all duration-300 hover:opacity-80 cursor-pointer">
+                <button className="group inline-flex items-center gap-2 px-5 py-2 text-sm hover:opacity-80 transition">
                   Contact
                   <ChevronRight
                     size={16}
-                    className="transition-transform duration-300 group-hover:translate-x-1"
+                    className="group-hover:translate-x-1 transition-transform"
                   />
                 </button>
               </div>
@@ -556,28 +532,34 @@ export default function HomePage() {
           className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
+          {/* Left heading section */}
           <div>
             <p className="text-sm mb-3 font-bold">WHY CHOOSE US</p>
             <h2
-              className="text-3xl md:text-3xl lg:text-4xl leading-tight mb-3"
+              className="text-3xl md:text-3xl lg:text-4xl leading-tight"
               style={{
                 fontFamily: '"Roboto Serif", serif',
                 letterSpacing: "-0.5px",
               }}
             >
-              TRANSFORMATIVE INVESTMENT <br />
+              TRANSFORMATIVE INVERSTMENT <br />
               SOLUTIONS THAT DELIVER <br />
-              EXCEPTIONAL VALUE
+              EXEPTIONAL VALUE
             </h2>
-            <p
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: "-0.5px",
-              }}
-            >
+          </div>
+
+          {/* Right text */}
+          <div
+            className="text-sm md:text-md leading-relaxed max-w-md md:pt-44"
+            style={{
+              fontFamily: '"DM Sans", sans-serif',
+              letterSpacing: "-0.5px",
+            }}
+          >
+            <p>
               Our commitment to innovation and client success sets us apart in
               the competitive investment landscape. We prioritize transparency,
               expertise, and personalized service.
@@ -622,7 +604,7 @@ export default function HomePage() {
 
           {/* Card 2 */}
           <motion.div
-            className="md:pt-20"
+            className="md:pt-30"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
@@ -650,7 +632,7 @@ export default function HomePage() {
 
           {/* Card 3 */}
           <motion.div
-            className="md:pt-40"
+            className="md:pt-60"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
@@ -679,7 +661,7 @@ export default function HomePage() {
 
         {/* Buttons */}
         <motion.div
-          className="max-w-7xl mx-auto mt-10 flex gap-3"
+          className="max-w-7xl mx-auto flex gap-3"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
