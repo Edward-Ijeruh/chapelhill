@@ -109,7 +109,7 @@ export default function HomePage() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          {/* Founder Image */}
+          {/* Founder image */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
