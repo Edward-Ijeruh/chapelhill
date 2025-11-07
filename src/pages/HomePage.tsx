@@ -5,8 +5,6 @@ import { ChevronRight, ChevronDown } from "lucide-react";
 import sectionTwoImgOne from "../assets/images/homepage/section-2-img-1.jpg";
 import sectionTwoImgTwo from "../assets/images/homepage/section-2-img-2.jpg";
 import sectionTwoImgThree from "../assets/images/homepage/section-2-img-3.jpg";
-import sectionThreeImgOne from "../assets/images/homepage/section-3-img-1.png";
-import sectionThreeImgTwo from "../assets/images/homepage/section-3-img-2.png";
 import sectionFourImgOne from "../assets/images/homepage/section-4-img-1.png";
 import sectionFourImgTwo from "../assets/images/homepage/section-4-img-2.jpg";
 import sectionFourImgThree from "../assets/images/homepage/section-4-img-3.png";
