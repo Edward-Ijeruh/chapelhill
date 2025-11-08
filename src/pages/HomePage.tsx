@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronRight, ChevronDown } from "lucide-react";
+import StatsGrid from "../Components/StatsGrid";
 
 // Images
 import sectionTwoImgOne from "../assets/images/homepage/section-2-img-1.jpg";
@@ -12,6 +13,7 @@ import sectionFiveImgOne from "../assets/images/homepage/section-5-img-1.jpg";
 import sectionFiveImgTwo from "../assets/images/homepage/section-5-img-2.jpg";
 import sectionFiveImgThree from "../assets/images/homepage/section-5-img-3.jpg";
 import sectionSixImg from "../assets/images/homepage/section-6-img.png";
+import sectionSevenImg from "../assets/images/homepage/section-7-img-1.png";
 import ceo from "../assets/images/homepage/ceo.jpg";
 
 export default function HomePage() {
@@ -39,6 +41,7 @@ export default function HomePage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="text-white max-w-xl"
+            viewport={{ once: false, amount: 0.3 }}
           >
             <h1
               style={{
@@ -73,6 +76,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
+            viewport={{ once: false, amount: 0.3 }}
             className="hidden md:block absolute bottom-24 right-6 text-white/90 text-xs md:text-sm leading-relaxed max-w-sm"
             style={{
               fontFamily: '"DM Sans", sans-serif',
@@ -107,7 +111,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.3 }}
         >
           {/* Founder image */}
           <motion.div
@@ -128,7 +132,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <p
               className="text-xs mb-4 font-bold"
@@ -186,7 +190,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.3 }}
         >
           {/* Left heading section */}
           <div>
@@ -247,7 +251,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <img
               src={sectionTwoImgOne}
@@ -271,7 +275,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <img
               src={sectionTwoImgTwo}
@@ -294,7 +298,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <img
               src={sectionTwoImgThree}
@@ -313,6 +317,60 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Our Impact */}
+      <section className="bg-white text-[#0D1B1E] py-24 px-6 md:px-12 lg:px-24">
+        <motion.div
+          className="max-w-7xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          {/* Heading */}
+          <p
+            className="text-xs font-bold mb-3"
+            style={{ letterSpacing: "0.08em" }}
+          >
+            OUR IMPACT
+          </p>
+
+          <h2
+            className="text-3xl md:text-4xl leading-tight max-w-3xl"
+            style={{
+              fontFamily: '"Roboto Serif", serif',
+              letterSpacing: "-0.5px",
+            }}
+          >
+            QUANTIFIABLE RESULTS THAT <br /> DEMONSTRATE OUR <br /> COMMITMENT
+            TO FINANCIAL <br />
+            EXCELLENCE
+          </h2>
+
+          <p
+            className="text-sm md:text-base text-[#333] mt-4 max-w-2xl"
+            style={{
+              fontFamily: '"DM Sans", sans-serif',
+              letterSpacing: "-0.3px",
+            }}
+          >
+            Our track record speaks volumes about our approach to investment
+            management and client success.
+          </p>
+
+          {/* Content Layout */}
+          <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <img
+              src={sectionSevenImg}
+              alt="Impact illustration"
+              className="w-full h-auto rounded-xl object-cover shadow-md"
+            />
+
+            <StatsGrid />
+          </div>
+        </motion.div>
+      </section>
+
       {/* Consultation Steps */}
       <section className="bg-[#955c28] text-white py-20 ">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
@@ -322,7 +380,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             {/* Step label */}
             <div
@@ -394,7 +452,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <div
               className="absolute top-6 left-0 flex items-center gap-2"
@@ -463,7 +521,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <div
               className="absolute top-6 left-0 flex items-center gap-2"
@@ -531,7 +589,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.3 }}
         >
           {/* Left heading section */}
           <div>
@@ -578,7 +636,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <img
               src={sectionFiveImgOne}
@@ -606,7 +664,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <img
               src={sectionFiveImgTwo}
@@ -634,7 +692,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <img
               src={sectionFiveImgThree}
@@ -663,7 +721,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.3 }}
         >
           <button className="border border-black px-4 py-2 rounded-full text-sm md:text-md hover:bg-black hover:text-white transition cursor-pointer">
             Learn more
@@ -687,7 +745,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <p
               className="text-xs mb-4 font-bold"
@@ -746,7 +804,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <img
               src={sectionSixImg}
