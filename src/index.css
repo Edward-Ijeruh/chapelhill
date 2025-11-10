@@ -7,3 +7,20 @@ a,
 button {
   cursor: url("/logo-cursor.png") 12 12, pointer;
 }
+
+@keyframes scrollAwards {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.awards-marquee {
+  animation: scrollAwards 20s linear infinite;
+}
+
+.awards-marquee:hover {
+  animation-play-state: paused;
+}

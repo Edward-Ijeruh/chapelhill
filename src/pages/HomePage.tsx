@@ -15,6 +15,13 @@ import sectionFiveImgThree from "../assets/images/homepage/section-5-img-3.jpg";
 import sectionSixImg from "../assets/images/homepage/section-6-img.png";
 import sectionSevenImg from "../assets/images/homepage/section-7-img-1.png";
 import ceo from "../assets/images/homepage/ceo.jpg";
+import awardOne from "../assets/images/homepage/award-1.jpeg";
+import awardTwo from "../assets/images/homepage/award-2.jpeg";
+import awardThree from "../assets/images/homepage/award-3.jpeg";
+import awardFour from "../assets/images/homepage/award-4.jpeg";
+import awardFive from "../assets/images/homepage/award-5.jpeg";
+import awardSix from "../assets/images/homepage/award-6.jpeg";
+import awardSeven from "../assets/images/homepage/award-7.jpeg";
 
 export default function HomePage() {
   return (
@@ -326,40 +333,73 @@ export default function HomePage() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.3 }}
         >
-          {/* Heading */}
-          <p
-            className="text-xs font-bold mb-3"
-            style={{ letterSpacing: "0.08em" }}
-          >
-            OUR IMPACT
-          </p>
+          {/* Top */}
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left text */}
+            <div>
+              <p
+                className="text-xs font-bold mb-3"
+                style={{ letterSpacing: "0.08em" }}
+              >
+                OUR IMPACT
+              </p>
 
-          <h2
-            className="text-3xl md:text-4xl leading-tight max-w-3xl"
-            style={{
-              fontFamily: '"Roboto Serif", serif',
-              letterSpacing: "-0.5px",
-            }}
-          >
-            QUANTIFIABLE RESULTS THAT <br /> DEMONSTRATE OUR <br /> COMMITMENT
-            TO FINANCIAL <br />
-            EXCELLENCE
-          </h2>
+              <h2
+                className="text-3xl md:text-4xl leading-tight max-w-xl"
+                style={{
+                  fontFamily: '"Roboto Serif", serif',
+                  letterSpacing: "-0.5px",
+                }}
+              >
+                QUANTIFIABLE RESULTS THAT <br /> DEMONSTRATE OUR <br />{" "}
+                COMMITMENT TO FINANCIAL <br />
+                EXCELLENCE
+              </h2>
 
-          <p
-            className="text-sm md:text-base text-[#333] mt-4 max-w-2xl"
-            style={{
-              fontFamily: '"DM Sans", sans-serif',
-              letterSpacing: "-0.3px",
-            }}
-          >
-            Our track record speaks volumes about our approach to investment
-            management and client success.
-          </p>
+              <p
+                className="text-sm md:text-base text-[#333] mt-4 max-w-md"
+                style={{
+                  fontFamily: '"DM Sans", sans-serif',
+                  letterSpacing: "-0.3px",
+                }}
+              >
+                Our track record speaks volumes about our approach to investment
+                management and client success.
+              </p>
+            </div>
 
-          {/* Content Layout */}
-          <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
-            {/* Image */}
+            {/* Awards */}
+            <div className="overflow-hidden relative w-full flex items-center h-30 md:h-50 mt-0 md:my-auto">
+              <div className="awards-marquee flex gap-10 min-w-max items-center opacity-80">
+                {[
+                  awardOne,
+                  awardTwo,
+                  awardThree,
+                  awardFour,
+                  awardFive,
+                  awardSix,
+                  awardSeven,
+                  awardOne,
+                  awardTwo,
+                  awardThree,
+                  awardFour,
+                  awardFive,
+                  awardSix,
+                  awardSeven,
+                ].map((logo, index) => (
+                  <img
+                    key={index}
+                    src={logo}
+                    alt={`Award ${index + 1}`}
+                    className="h-28 md:h-50 w-auto object-contain hover:opacity-100 transition-opacity duration-300"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Image and stats */}
+          <div className="mt-20 grid md:grid-cols-2 gap-14 items-center">
             <img
               src={sectionSevenImg}
               alt="Impact illustration"
