@@ -364,7 +364,7 @@ export default function HomePage() {
                         style={{ fontFamily: '"Roboto Serif", serif' }}
                         className="whitespace-nowrap text-[clamp(3rem,9vw,8.5rem)] font-normal leading-none tracking-[-0.075em]"
                       >
-                        Build lasting value with Chapel Hill Denham.
+                        Invest with Chapel Hill Denham.
                       </span>
 
                       <span
