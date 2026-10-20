@@ -39,8 +39,10 @@ export default function HomePage() {
           playsInline
         />
 
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#0d1d26]/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1d26]/65 via-[#0d1d26]/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0d1d26]/40 via-transparent to-transparent" />
 
         {/* Main content */}
         <div className="relative z-10 max-w-7xl mx-auto h-full px-6 flex items-center">
