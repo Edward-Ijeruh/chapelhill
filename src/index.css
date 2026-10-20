@@ -2,12 +2,6 @@
 
 @import "tailwindcss";
 
-body,
-a,
-button {
-  cursor: url("/logo-cursor.png") 12 12, pointer;
-}
-
 @keyframes scrollAwards {
   0% {
     transform: translateX(0);

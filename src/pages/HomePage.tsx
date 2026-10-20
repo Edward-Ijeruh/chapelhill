@@ -22,6 +22,7 @@ import awardFour from "../assets/images/homepage/award-4.jpeg";
 import awardFive from "../assets/images/homepage/award-5.jpeg";
 import awardSix from "../assets/images/homepage/award-6.jpeg";
 import awardSeven from "../assets/images/homepage/award-7.jpeg";
+import heroVideo from "../assets/images/homepage/chd-hero-video.mp4";
 
 export default function HomePage() {
   return (
@@ -31,7 +32,7 @@ export default function HomePage() {
         {/* Background video */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
-          src="https://chapelhilldenham.com/wp-content/uploads/2024/07/overview-landing-video.mp4#20336"
+          src={heroVideo}
           autoPlay
           loop
           muted
@@ -39,7 +40,7 @@ export default function HomePage() {
         />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Main content */}
         <div className="relative z-10 max-w-7xl mx-auto h-full px-6 flex items-center">
@@ -84,7 +85,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="hidden md:block absolute bottom-24 right-6 text-white/90 text-xs md:text-sm leading-relaxed max-w-sm"
+            className="hidden md:block absolute bottom-24 right-6 text-white/90 text-xs md:text-xl leading-relaxed max-w-sm"
             style={{
               fontFamily: '"DM Sans", sans-serif',
               letterSpacing: "-0.5px",

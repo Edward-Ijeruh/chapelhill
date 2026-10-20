@@ -70,7 +70,7 @@ export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [openService, setOpenService] = useState<string | null>(null);
   const [openServiceMobile, setOpenServiceMobile] = useState<string | null>(
-    null
+    null,
   );
   const [country, setCountry] = useState("Nigeria");
   const navRef = useRef<HTMLDivElement | null>(null);
@@ -93,7 +93,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 w-full z-50 bg-[#0d1d26] border-b border-white/10"
       style={{ fontFamily: '"DM Sans", sans-serif', letterSpacing: "-0.5px" }}
     >
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-18 md:h-20">
         <img src={NavLogo} alt="Logo" className="h-12 w-auto" />
 
         {/* Desktop menu */}
@@ -104,7 +104,7 @@ export default function Navbar() {
                 className="flex items-center gap-1 hover:text-gray-300 transition-colors cursor-pointer"
                 onClick={() =>
                   setOpenDropdown(
-                    openDropdown === item.label ? null : item.label
+                    openDropdown === item.label ? null : item.label,
                   )
                 }
               >
@@ -154,7 +154,7 @@ export default function Navbar() {
                               setOpenService(
                                 openService === service.title
                                   ? null
-                                  : service.title
+                                  : service.title,
                               )
                             }
                             className="w-full text-left py-3 px-2 flex justify-between items-center"
@@ -234,7 +234,7 @@ export default function Navbar() {
                 <button
                   onClick={() =>
                     setOpenDropdown(
-                      openDropdown === item.label ? null : item.label
+                      openDropdown === item.label ? null : item.label,
                     )
                   }
                   className="flex justify-between w-full py-2 items-center"
@@ -282,7 +282,7 @@ export default function Navbar() {
                                 setOpenServiceMobile(
                                   openServiceMobile === service.title
                                     ? null
-                                    : service.title
+                                    : service.title,
                                 )
                               }
                               className="w-full flex justify-between items-center py-2"
