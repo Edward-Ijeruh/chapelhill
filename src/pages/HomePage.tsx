@@ -1,37 +1,41 @@
 import { motion } from "framer-motion";
-import { ChevronRight, ChevronDown } from "lucide-react";
+import {
+  // ChevronRight,
+  ArrowDownRight,
+  ArrowRight,
+  // ChevronDown,
+} from "lucide-react";
 import StatsGrid from "../Components/StatsGrid";
 
 // Images
-import sectionTwoImgOne from "../assets/images/homepage/section-2-img-1.jpg";
-import sectionTwoImgTwo from "../assets/images/homepage/section-2-img-2.jpg";
-import sectionTwoImgThree from "../assets/images/homepage/section-2-img-3.jpg";
-import sectionFourImgOne from "../assets/images/homepage/section-4-img-1.png";
-import sectionFourImgTwo from "../assets/images/homepage/section-4-img-2.jpg";
-import sectionFourImgThree from "../assets/images/homepage/section-4-img-3.png";
-import sectionFiveImgOne from "../assets/images/homepage/section-5-img-1.jpg";
-import sectionFiveImgTwo from "../assets/images/homepage/section-5-img-2.jpg";
-import sectionFiveImgThree from "../assets/images/homepage/section-5-img-3.jpg";
+// import sectionTwoImgOne from "../assets/images/homepage/section-2-img-1.jpg";
+// import sectionTwoImgTwo from "../assets/images/homepage/section-2-img-2.jpg";
+// import sectionTwoImgThree from "../assets/images/homepage/section-2-img-3.jpg";
+// import sectionFourImgOne from "../assets/images/homepage/section-4-img-1.png";
+// import sectionFourImgTwo from "../assets/images/homepage/section-4-img-2.jpg";
+// import sectionFourImgThree from "../assets/images/homepage/section-4-img-3.png";
+// import sectionFiveImgOne from "../assets/images/homepage/section-5-img-1.jpg";
+// import sectionFiveImgTwo from "../assets/images/homepage/section-5-img-2.jpg";
+// import sectionFiveImgThree from "../assets/images/homepage/section-5-img-3.jpg";
 import sectionSixImg from "../assets/images/homepage/section-6-img.png";
-import sectionSevenImg from "../assets/images/homepage/section-7-img-1.png";
+// import sectionSevenImg from "../assets/images/homepage/section-7-img-1.png";
 import ceo from "../assets/images/homepage/ceo.jpg";
-import awardOne from "../assets/images/homepage/award-1.jpeg";
-import awardTwo from "../assets/images/homepage/award-2.jpeg";
-import awardThree from "../assets/images/homepage/award-3.jpeg";
-import awardFour from "../assets/images/homepage/award-4.jpeg";
-import awardFive from "../assets/images/homepage/award-5.jpeg";
-import awardSix from "../assets/images/homepage/award-6.jpeg";
-import awardSeven from "../assets/images/homepage/award-7.jpeg";
+// import awardOne from "../assets/images/homepage/award-1.jpeg";
+// import awardTwo from "../assets/images/homepage/award-2.jpeg";
+// import awardThree from "../assets/images/homepage/award-3.jpeg";
+// import awardFour from "../assets/images/homepage/award-4.jpeg";
+// import awardFive from "../assets/images/homepage/award-5.jpeg";
+// import awardSix from "../assets/images/homepage/award-6.jpeg";
+// import awardSeven from "../assets/images/homepage/award-7.jpeg";
 import heroVideo from "../assets/images/homepage/chd-hero-video.mp4";
 
 export default function HomePage() {
   return (
     <>
-      {/* Herosection */}
-      <section className="relative w-full h-screen md:h-screen overflow-hidden">
-        {/* Background video */}
+      {/* Hero */}
+      <section className="relative isolate min-h-[720px] h-[100svh] max-h-[1100px] overflow-hidden bg-[#0d1d26] text-white">
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
           src={heroVideo}
           autoPlay
           loop
@@ -39,781 +43,417 @@ export default function HomePage() {
           playsInline
         />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-[#0d1d26]/40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1d26]/65 via-[#0d1d26]/35 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0d1d26]/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[#0d1d26]/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1d26]/75 via-[#0d1d26]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0d1d26]/75 via-transparent to-[#0d1d26]/10" />
 
-        {/* Main content */}
-        <div className="relative z-10 max-w-7xl mx-auto h-full px-6 flex items-center">
+        <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-between px-6 pb-10 pt-32 md:px-12 md:pb-14 lg:px-20">
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white max-w-xl"
-            viewport={{ once: false, amount: 0.3 }}
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, ease: "easeOut" }}
+            className="mt-auto pb-20 md:pb-28"
           >
-            <h1
-              style={{
-                fontFamily: '"Roboto Serif", serif',
-                letterSpacing: "-0.5px",
-              }}
-              className="text-3xl md:text-5xl uppercase leading-tight tracking-wide"
-            >
-              Strategic wealth management for forward thinking investors
-            </h1>
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between lg:gap-16">
+              <div className="max-w-5xl">
+                <h1
+                  style={{ fontFamily: '"Roboto Serif", serif' }}
+                  className="max-w-5xl text-[clamp(2.75rem,6.5vw,6.5rem)] font-normal leading-[0.99] tracking-[-0.065em]"
+                >
+                  Capital that
+                  <br />
+                  <span className="text-white/70">moves Africa</span>
+                  <br />
+                  forward.
+                </h1>
 
-            <div
-              className="mt-6 flex items-center gap-4"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: "-0.5px",
-              }}
-            >
-              <button className="px-6 py-3 bg-[#bb7332] hover:bg-white hover:text-[#0d1d26] transition-all rounded-full text-sm font-medium cursor-pointer">
-                Explore
-              </button>
-              <button className="px-6 py-3 border border-white text-white hover:bg-white hover:text-[#0d1d26] transition-all rounded-full text-sm font-medium cursor-pointer">
-                Consult
-              </button>
+                <div className="mt-9 flex flex-wrap gap-3">
+                  <a
+                    href="#what-we-do"
+                    className="group inline-flex items-center gap-5 rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none bg-[#bb7332] px-6 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-white hover:text-[#0d1d26]"
+                  >
+                    See what we do
+                    <ArrowDownRight
+                      size={17}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                  </a>
+
+                  <a
+                    href="/contact"
+                    className="group inline-flex items-center gap-4 rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none border border-white/60 px-6 py-4 text-sm font-medium text-white transition-colors duration-300 hover:border-white hover:bg-white hover:text-[#0d1d26]"
+                  >
+                    Start a conversation
+                    <ArrowDownRight
+                      size={17}
+                      className="transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <p className="mt-10 max-w-sm text-sm leading-7 text-white md:text-lg lg:mb-2 lg:mt-0">
+                Strategic wealth management for forward-thinking investors. We
+                connect capital, expertise and opportunity to help shape lasting
+                economic progress.
+              </p>
             </div>
           </motion.div>
         </div>
-
-        {/* Bottom right */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            viewport={{ once: false, amount: 0.3 }}
-            className="hidden md:block absolute bottom-24 right-6 text-white/90 text-xs md:text-xl leading-relaxed max-w-sm"
-            style={{
-              fontFamily: '"DM Sans", sans-serif',
-              letterSpacing: "-0.5px",
-            }}
-          >
-            We deliver sophisticated investment strategies, tailored to your
-            unique financial goals, combining cutting-edge research with
-            personal expertise.
-          </motion.p>
-        </div>
-
-        {/* Mobile scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 md:hidden cursor-pointer"
-          onClick={() => {
-            const nextSection = document.getElementById("next-section");
-            if (nextSection) nextSection.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          <ChevronDown size={20} className="text-white opacity-90" />
-        </motion.div>
       </section>
 
-      {/* Founder Philosophy */}
-      <section className="bg-white text-[#0D1B1E] py-24 px-6 md:px-12 lg:px-24">
-        <motion.div
-          className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          {/* Founder image */}
+      {/* Founder section */}
+      <section id="founder" className="overflow-hidden bg-white text-[#17252b]">
+        <div className="mx-auto max-w-[1600px] px-6 py-20 md:px-12 md:py-24 lg:px-20">
+          {/* Heading */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="mx-auto mb-16 max-w-7xl text-center md:mb-20"
           >
-            <img
-              src={ceo}
-              alt="Founder Portrait"
-              className="w-full h-auto rounded-xl object-cover shadow-lg"
-            />
+            <div className="mx-auto mb-5 h-0.5 w-[40px] bg-[#17252b]" />
+            <p className="text-[12px] font-semibold uppercase tracking-[0.2em]">
+              PERSPECTIVE FROM THE TOP
+            </p>
           </motion.div>
 
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.1, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <p
-              className="text-xs mb-4 font-bold"
-              style={{ letterSpacing: "0.08em" }}
+          <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-12 lg:gap-20">
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="lg:col-span-5"
             >
-              BEYOND INVESTING
-            </p>
+              <div className="overflow-hidden rounded-tl-2xl rounded-br-2xl rounded-tr-none rounded-bl-none">
+                <img
+                  src={ceo}
+                  alt="Bolaji Balogun, Chief Executive Officer of Chapel Hill Denham"
+                  className="h-[460px] w-full object-cover object-center md:h-[540px]"
+                />
+              </div>
+            </motion.div>
 
-            <h2
-              className="text-3xl md:text-4xl leading-tight mb-8"
-              style={{
-                fontFamily: '"Roboto Serif", serif',
-                letterSpacing: "-0.5px",
-              }}
+            {/* Text */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="lg:col-span-7"
             >
-              A Deep-Rooted Philosophy
-            </h2>
+              <h2
+                style={{ fontFamily: '"Roboto Serif", serif' }}
+                className="max-w-xl text-5xl font-normal leading-[1.03] tracking-[-0.055em]"
+              >
+                Beyond Investing: A Deep-Rooted Philosophy
+              </h2>
 
-            <p
-              className="text-sm md:text-base leading-relaxed mb-8"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: "-0.3px",
-              }}
-            >
-              “Over the next decade, less than 1% of the capital managed by
-              global institutional asset managers can change the course of
-              Africa’s economic and social history, support the planet’s route
-              to zero carbon, and lift more than a billion people out of
-              poverty. A prosperous Africa can feed the world, resource the
-              world, and reverse the migration. The foundation for delivering
-              this outcome is in accelerating the rate of investment into
-              low-carbon, resilient infrastructure across Africa.”
-            </p>
+              <p className="mt-10 max-w-2xl text-sm leading-8 text-[#485258] md:text-base">
+                Over the next decade, less than 1% of the capital managed by
+                global institutional asset managers can change the course of
+                Africa’s economic and social history, support the planet’s route
+                to zero carbon, and lift more than a billion people out of
+                poverty. A prosperous Africa can feed the world, resource the
+                world, and reverse the migration. The foundation for delivering
+                this outcome is in accelerating the rate of investment into
+                low-carbon, resilient infrastructure across Africa.
+              </p>
 
-            <p
-              className="text-sm md:text-base font-semibold"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: "-0.3px",
-              }}
-            >
-              - Bolaji Balogun <br />
-              Chief Executive Officer, Chapel Hill Denham.
-            </p>
-          </motion.div>
-        </motion.div>
+              <div className="mt-10 border-t border-[#17252b]/20 pt-5">
+                <p className="text-xs uppercase tracking-[0.14em] text-[#687178]">
+                  Bolaji Balogun
+                </p>
+                <p className="mt-1 text-sm font-medium">
+                  Chief Executive Officer
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
-      {/* Our Approach */}
-      <section className="bg-[#0d1d26] text-white py-20 px-6 md:px-12 lg:px-24">
-        {/* Top section */}
-        <motion.div
-          className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          {/* Left heading section */}
-          <div>
-            <p className="text-sm mb-3 font-bold">OUR APPROACH</p>
-            <h2
-              className="text-3xl md:text-3xl lg:text-4xl leading-tight"
-              style={{
-                fontFamily: '"Roboto Serif", serif',
-                letterSpacing: "-0.5px",
-              }}
-            >
-              COMPREHENSIVE <br />
-              INVESTMENT SOLUTIONS <br />
-              FOR DYNAMIC <br />
-              INVESTORS
-            </h2>
-          </div>
-
-          {/* Right text and buttons */}
-          <div
-            className="text-sm md:text-md leading-relaxed text-gray-300 max-w-md md:pt-44"
-            style={{
-              fontFamily: '"DM Sans", sans-serif',
-              letterSpacing: "-0.5px",
-            }}
-          >
-            <p>
-              We provide integrated financial services designed to maximize your
-              investment potential across multiple market sectors. Our holistic
-              approach ensures strategic and informed decision-making.
-            </p>
-
-            <div className="mt-6 flex gap-3">
-              <button className="border border-white px-4 py-2 rounded-full font-body text-sm md:text-md hover:bg-white hover:text-black transition cursor-pointer">
-                Learn more
-              </button>
-              <button className="group inline-flex items-center gap-2 px-5 py-2 font-body text-sm md:text-md text-white rounded-sm transition-all duration-300 hover:opacity-80 cursor-pointer">
-                Contact
-                <ChevronRight
-                  size={16}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </button>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Cards section */}
-        <div
-          className="max-w-7xl mx-auto mt-16 grid md:grid-cols-3 gap-10"
-          style={{
-            fontFamily: '"DM Sans", sans-serif',
-            letterSpacing: "-0.5px",
-          }}
-        >
-          {/* Card 1 */}
+      {/* What We Do */}
+      <section
+        id="what-we-do"
+        className="bg-[#0d1d26] py-20 text-white md:py-24"
+      >
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
+          {/* Heading */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="mx-auto mb-16 max-w-7xl text-center md:mb-20"
           >
-            <img
-              src={sectionTwoImgOne}
-              className="w-full h-48 object-cover rounded-xl"
-            />
-            <h3
-              className="text-lg mt-4"
-              style={{ fontFamily: '"Roboto Serif", serif' }}
-            >
-              FINANCIAL ADVISORY
-            </h3>
-            <p className="text-sm text-gray-300 mt-2">
-              Expert guidance to optimize your investment portfolio and
-              strategy.
+            <div className="mx-auto mb-5 h-0.5 w-[40px] bg-white" />
+            <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-white/80">
+              WHAT WE DO
             </p>
           </motion.div>
 
-          {/* Card 2 */}
-          <motion.div
-            className="md:pt-20"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <img
-              src={sectionTwoImgTwo}
-              className="w-full h-48 object-cover rounded-xl"
-            />
-            <h3
-              className="text-lg mt-4"
-              style={{ fontFamily: '"Roboto Serif", serif' }}
+          {/* Introduction */}
+          <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-12 md:gap-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="md:col-span-7"
             >
-              ASSET MANAGEMENT
-            </h3>
-            <p className="text-sm text-gray-300 mt-2">
-              Sophisticated portfolio construction tailored to your goals.
-            </p>
-          </motion.div>
+              <h2
+                style={{ fontFamily: '"Roboto Serif", serif' }}
+                className="max-w-xl text-5xl font-normal leading-[1.03] tracking-[-0.055em]"
+              >
+                Financial expertise for a changing world.
+              </h2>
+            </motion.div>
 
-          {/* Card 3 */}
-          <motion.div
-            className="md:pt-40"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.1, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <img
-              src={sectionTwoImgThree}
-              className="w-full h-48 object-cover rounded-xl"
-            />
-            <h3
-              className="text-lg mt-4"
-              style={{ fontFamily: '"Roboto Serif", serif' }}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="flex items-end md:col-span-5"
             >
-              CAPITAL MARKETS
-            </h3>
-            <p className="text-sm text-gray-300 mt-2">
-              Advanced strategic insights and global investment opportunities.
-            </p>
-          </motion.div>
+              <p className="max-w-md text-sm leading-7 text-white/65 md:text-base">
+                We bring together investment expertise and market insight to
+                help clients navigate complexity and pursue meaningful
+                opportunities.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Services grid */}
+          <div className="mx-auto mt-20 grid max-w-7xl border-l border-t border-white/20 sm:grid-cols-2 lg:grid-cols-6">
+            {[
+              {
+                title: "Investment Banking",
+                description:
+                  "Strategic advice and capital solutions for businesses and institutions.",
+                href: "/services/investment-banking",
+                span: "lg:col-span-2",
+              },
+              {
+                title: "Investment Management",
+                description:
+                  "Disciplined investment strategies focused on long-term value.",
+                href: "/services/investment-management",
+                span: "lg:col-span-2",
+              },
+              {
+                title: "Alternative Investments",
+                description:
+                  "Access to differentiated opportunities across private markets.",
+                href: "/services/alternative-investments",
+                span: "lg:col-span-2",
+              },
+              {
+                title: "Wealth Management",
+                description:
+                  "Personalised financial strategies shaped around your ambitions.",
+                href: "/services/wealth-management",
+                span: "lg:col-span-3",
+              },
+              {
+                title: "Securities Trading & Research",
+                description:
+                  "Market access, informed research and execution expertise.",
+                href: "/services/securities-trading-research",
+                span: "lg:col-span-3",
+              },
+            ].map((item, index) => (
+              <motion.article
+                key={item.title}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.15 }}
+                className={`group relative min-h-[270px] overflow-hidden border-b border-r border-white/20 p-7 sm:p-8 lg:min-h-[290px] lg:p-10 ${item.span}`}
+              >
+                {/* Animated border drawn into view */}
+                <svg
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 h-full w-full"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                >
+                  <motion.rect
+                    x="0.5"
+                    y="0.5"
+                    width="99"
+                    height="99"
+                    fill="none"
+                    stroke="rgba(255,255,255,0.8)"
+                    strokeWidth="0.45"
+                    vectorEffect="non-scaling-stroke"
+                    pathLength="1"
+                    initial={{ pathLength: 0 }}
+                    variants={{
+                      hidden: { pathLength: 0 },
+                      visible: { pathLength: 1 },
+                    }}
+                    transition={{
+                      duration: 1.15,
+                      delay: index * 0.12,
+                      ease: [0.65, 0, 0.35, 1],
+                    }}
+                  />
+                </svg>
+
+                <div className="relative z-10 flex h-full flex-col items-start">
+                  <h3
+                    style={{ fontFamily: '"Roboto Serif", serif' }}
+                    className="max-w-sm text-2xl font-normal leading-snug tracking-[-0.035em] md:text-3xl"
+                  >
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-4 max-w-sm text-sm leading-7 text-white/60">
+                    {item.description}
+                  </p>
+
+                  <a
+                    href={item.href}
+                    className="mt-auto inline-flex items-center gap-3 border-b border-white/50 pb-2 pt-8 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-colors duration-300 hover:border-[#bb7332] hover:text-[#bb7332]"
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Our Impact */}
-      <section className="bg-white text-[#0D1B1E] py-24 px-6 md:px-12 lg:px-24">
+      {/* Brand Marquee */}
+      <section className="w-full overflow-hidden bg-[#0d1d26] py-16 text-white md:py-24 lg:py-28">
         <motion.div
-          className="max-w-7xl mx-auto"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="w-full"
         >
-          {/* Top */}
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Left text */}
-            <div>
-              <p
-                className="text-xs font-bold mb-3"
-                style={{ letterSpacing: "0.08em" }}
-              >
-                OUR IMPACT
-              </p>
+          <div className="overflow-hidden">
+            <motion.div
+              className="flex w-max"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                duration: 65,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+            >
+              {[0, 1].map((group) => (
+                <div
+                  key={group}
+                  aria-hidden={group === 1 ? "true" : undefined}
+                  className="flex shrink-0 items-center"
+                >
+                  {Array.from({ length: 3 }).map((_, index) => (
+                    <div
+                      key={index}
+                      className="flex shrink-0 items-center gap-8 px-6 sm:gap-12 sm:px-10 lg:gap-16 lg:px-14"
+                    >
+                      <span
+                        style={{ fontFamily: '"Roboto Serif", serif' }}
+                        className="whitespace-nowrap text-[clamp(3rem,9vw,8.5rem)] font-normal leading-none tracking-[-0.075em]"
+                      >
+                        Build lasting value with Chapel Hill Denham.
+                      </span>
 
-              <h2
-                className="text-3xl md:text-4xl leading-tight max-w-xl"
-                style={{
-                  fontFamily: '"Roboto Serif", serif',
-                  letterSpacing: "-0.5px",
-                }}
-              >
-                QUANTIFIABLE RESULTS THAT <br /> DEMONSTRATE OUR <br />{" "}
-                COMMITMENT TO FINANCIAL <br />
-                EXCELLENCE
-              </h2>
-
-              <p
-                className="text-sm md:text-base text-[#333] mt-4 max-w-md"
-                style={{
-                  fontFamily: '"DM Sans", sans-serif',
-                  letterSpacing: "-0.3px",
-                }}
-              >
-                Our track record speaks volumes about our approach to investment
-                management and client success.
-              </p>
-            </div>
-
-            {/* Awards */}
-            <div className="overflow-hidden relative w-full flex items-center h-30 md:h-50 mt-0 md:my-auto">
-              <div className="awards-marquee flex gap-10 min-w-max items-center opacity-80">
-                {[
-                  awardOne,
-                  awardTwo,
-                  awardThree,
-                  awardFour,
-                  awardFive,
-                  awardSix,
-                  awardSeven,
-                  awardOne,
-                  awardTwo,
-                  awardThree,
-                  awardFour,
-                  awardFive,
-                  awardSix,
-                  awardSeven,
-                ].map((logo, index) => (
-                  <img
-                    key={index}
-                    src={logo}
-                    alt={`Award ${index + 1}`}
-                    className="h-28 md:h-50 w-auto object-contain hover:opacity-100 transition-opacity duration-300"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Image and stats */}
-          <div className="mt-20 grid md:grid-cols-2 gap-14 items-center">
-            <img
-              src={sectionSevenImg}
-              alt="Impact illustration"
-              className="w-full h-auto rounded-xl object-cover shadow-md"
-            />
-
-            <StatsGrid />
+                      <span
+                        aria-hidden="true"
+                        className="h-3 w-3 shrink-0 rounded-full bg-[#bb7332] md:h-4 md:w-4"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </motion.div>
           </div>
         </motion.div>
       </section>
 
-      {/* Consultation Steps */}
-      <section className="bg-[#955c28] text-white py-20 ">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          {/* STEP 1 */}
+      {/* Impact */}
+      <section className="overflow-hidden bg-white py-24 text-[#17252b] md:py-32">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
+          {/* Heading */}
           <motion.div
-            className="relative py-16 flex flex-col md:flex-row items-center gap-12"
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="mx-auto mb-12 max-w-7xl text-center md:mb-16"
           >
-            {/* Step label */}
-            <div
-              className="absolute top-6 left-0 flex items-center gap-2"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: "-0.5px",
-              }}
-            >
-              <span className="text-sm font-bold">01</span>
-              <span className="text-sm font-bold">Initial Consultation</span>
-            </div>
-
-            {/* Left */}
-            <div className="flex-1">
-              <p className="text-sm mb-3">DISCOVERY</p>
-              <h2
-                className="text-3xl md:text-4xl leading-tight mb-4"
-                style={{
-                  fontFamily: '"Roboto Serif", serif',
-                  letterSpacing: "-0.5px",
-                }}
-              >
-                UNDERSTANDING YOUR UNIQUE FINANCIAL LANDSCAPE
-              </h2>
-              <p
-                className="text-sm leading-relaxed max-w-md"
-                style={{
-                  fontFamily: '"DM Sans", sans-serif',
-                  letterSpacing: "-0.5px",
-                }}
-              >
-                We begin by conducting an in-depth analysis of your current
-                financial situation, risk tolerance, and long-term objectives.
-              </p>
-
-              <div className="mt-6 flex gap-3">
-                <button className="border border-white px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
-                  Learn more
-                </button>
-                <button className="group inline-flex items-center gap-2 px-5 py-2 text-sm hover:opacity-80 transition">
-                  Contact
-                  <ChevronRight
-                    size={16}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </button>
-              </div>
-            </div>
-
-            {/* Right */}
-            <div className="flex-1 flex justify-end">
-              <img
-                src={sectionFourImgOne}
-                alt="Consultation Step 1"
-                className="w-full max-w-lg rounded-xl object-cover"
-              />
-            </div>
+            <div className="mx-auto mb-5 h-0.5 w-[40px] bg-[#17252b]" />
+            <p className="text-[12px] font-semibold uppercase tracking-[0.2em]">
+              OUR IMPACT
+            </p>
           </motion.div>
-        </div>
 
-        {/* Divider */}
-        <div className="w-full h-px bg-white/40"></div>
-
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          {/* STEP 2 */}
-          <motion.div
-            className="relative py-16 flex flex-col md:flex-row items-center gap-12"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <div
-              className="absolute top-6 left-0 flex items-center gap-2"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: "-0.5px",
-              }}
+          {/* Introduction */}
+          <div className="mx-auto mb-16 grid max-w-7xl gap-8 md:grid-cols-12 md:gap-16 lg:mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="md:col-span-7"
             >
-              <span className="text-sm font-bold">02</span>
-              <span className="text-sm font-bold">Strategy & Planning</span>
-            </div>
-
-            <div className="flex-1">
-              <p className="text-sm mb-3">DESIGN</p>
               <h2
-                className="text-3xl md:text-4xl leading-tight mb-4"
-                style={{
-                  fontFamily: '"Roboto Serif", serif',
-                  letterSpacing: "-0.5px",
-                }}
+                style={{ fontFamily: '"Roboto Serif", serif' }}
+                className="max-w-xl text-5xl font-normal leading-[1.03] tracking-[-0.055em] md:text-6xl"
               >
-                CRAFTING A PERSONALIZED INVESTMENT ROADMAP
+                Trust built through experience and results.
               </h2>
-              <p
-                className="text-sm leading-relaxed max-w-md"
-                style={{
-                  fontFamily: '"DM Sans", sans-serif',
-                  letterSpacing: "-0.5px",
-                }}
-              >
-                Our experts develop a customized investment strategy aligned
-                with your financial goals.
-              </p>
+            </motion.div>
 
-              <div className="mt-6 flex gap-3">
-                <button className="border border-white px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
-                  Learn more
-                </button>
-                <button className="group inline-flex items-center gap-2 px-5 py-2 text-sm hover:opacity-80 transition">
-                  Contact
-                  <ChevronRight
-                    size={16}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </button>
-              </div>
-            </div>
-
-            <div className="flex-1 flex justify-end">
-              <img
-                src={sectionFourImgTwo}
-                alt="Consultation Step 2"
-                className="w-full max-w-lg rounded-xl object-cover"
-              />
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Divider */}
-        <div className="w-full h-px bg-white/40"></div>
-
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          {/* STEP 3 */}
-          <motion.div
-            className="relative py-16 flex flex-col md:flex-row items-center gap-12"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <div
-              className="absolute top-6 left-0 flex items-center gap-2"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: "-0.5px",
-              }}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="flex items-end md:col-span-5"
             >
-              <span className="text-sm font-bold">03</span>
-              <span className="text-sm font-bold">Ongoing Management</span>
-            </div>
-
-            <div className="flex-1">
-              <p className="text-sm mb-3">EXECUTION</p>
-              <h2
-                className="text-3xl md:text-4xl leading-tight mb-4"
-                style={{
-                  fontFamily: '"Roboto Serif", serif',
-                  letterSpacing: "-0.5px",
-                }}
-              >
-                CONTINUOUS MONITORING & ADAPTIVE STRATEGIES
-              </h2>
-              <p
-                className="text-sm leading-relaxed max-w-md"
-                style={{
-                  fontFamily: '"DM Sans", sans-serif',
-                  letterSpacing: "-0.5px",
-                }}
-              >
-                We track performance and adjust strategies proactively to
-                maximize return.
+              <p className="max-w-md text-sm leading-7 text-[#17252b]/65 md:text-base">
+                Our track record reflects lasting client relationships,
+                disciplined investment thinking, and a commitment to delivering
+                tailored financial solutions across changing markets.
               </p>
-
-              <div className="mt-6 flex gap-3">
-                <button className="border border-white px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
-                  Learn more
-                </button>
-                <button className="group inline-flex items-center gap-2 px-5 py-2 text-sm hover:opacity-80 transition">
-                  Contact
-                  <ChevronRight
-                    size={16}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </button>
-              </div>
-            </div>
-
-            <div className="flex-1 flex justify-end">
-              <img
-                src={sectionFourImgThree}
-                alt="Consultation Step 3"
-                className="w-full max-w-lg rounded-xl object-cover"
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="bg-white text-black py-20 px-6 md:px-12 lg:px-24">
-        {/* Top section */}
-        <motion.div
-          className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          {/* Left heading section */}
-          <div>
-            <p className="text-sm mb-3 font-bold">WHY CHOOSE US</p>
-            <h2
-              className="text-3xl md:text-3xl lg:text-4xl leading-tight"
-              style={{
-                fontFamily: '"Roboto Serif", serif',
-                letterSpacing: "-0.5px",
-              }}
-            >
-              TRANSFORMATIVE INVERSTMENT <br />
-              SOLUTIONS THAT DELIVER <br />
-              EXEPTIONAL VALUE
-            </h2>
+            </motion.div>
           </div>
 
-          {/* Right text */}
-          <div
-            className="text-sm md:text-md leading-relaxed max-w-md md:pt-44"
-            style={{
-              fontFamily: '"DM Sans", sans-serif',
-              letterSpacing: "-0.5px",
-            }}
-          >
-            <p>
-              Our commitment to innovation and client success sets us apart in
-              the competitive investment landscape. We prioritize transparency,
-              expertise, and personalized service.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Cards section */}
-        <div
-          className="max-w-7xl mx-auto mt-16 grid md:grid-cols-3 gap-10"
-          style={{
-            fontFamily: '"DM Sans", sans-serif',
-            letterSpacing: "-0.5px",
-          }}
-        >
-          {/* Card 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <img
-              src={sectionFiveImgOne}
-              alt="A person receiving financial advice"
-              className="w-full h-48 object-cover rounded-xl"
-            />
-            <h3
-              className="text-lg mt-4"
-              style={{
-                fontFamily: '"Roboto Serif", serif',
-                letterSpacing: "-0.5px",
-              }}
-            >
-              PROVEN TRACK RECORD
-            </h3>
-            <p className="text-sm mt-2">
-              Consistent performance and strategic investment approaches that
-              generate meaningful returns.
-            </p>
-          </motion.div>
-
-          {/* Card 2 */}
-          <motion.div
-            className="md:pt-30"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <img
-              src={sectionFiveImgTwo}
-              alt="A person managing assets"
-              className="w-full h-48 object-cover rounded-xl"
-            />
-            <h3
-              className="text-lg mt-4"
-              style={{
-                fontFamily: '"Roboto Serif", serif',
-                letterSpacing: "-0.5px",
-              }}
-            >
-              CUSTOMIZED STRATEGIES
-            </h3>
-            <p className="text-sm mt-2">
-              Tailored investment solutions designed to meet your unique
-              financial objectives and risk profile.
-            </p>
-          </motion.div>
-
-          {/* Card 3 */}
-          <motion.div
-            className="md:pt-60"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <img
-              src={sectionFiveImgThree}
-              alt="Two people looking at capital markets"
-              className="w-full h-48 object-cover rounded-xl"
-            />
-            <h3
-              className="text-lg mt-4"
-              style={{
-                fontFamily: '"Roboto Serif", serif',
-                letterSpacing: "-0.5px",
-              }}
-            >
-              ADVANCED TECHNOLOGY
-            </h3>
-            <p className="text-sm mt-2">
-              Cutting-edge analytical tools and research capabilities to inform
-              smarter investment decisions.
-            </p>
-          </motion.div>
+          {/* Statistics grid */}
+          <StatsGrid />
         </div>
-
-        {/* Buttons */}
-        <motion.div
-          className="max-w-7xl mx-auto flex gap-3"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          <button className="border border-black px-4 py-2 rounded-full text-sm md:text-md hover:bg-black hover:text-white transition cursor-pointer">
-            Learn more
-          </button>
-
-          <button className="group inline-flex items-center gap-2 px-5 py-2 text-sm md:text-md text-black rounded-sm transition-all duration-300 hover:opacity-80 cursor-pointer">
-            Contact
-            <ChevronRight
-              size={16}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </button>
-        </motion.div>
       </section>
 
       {/* InvestNaija */}
-      <section className="bg-[#0d1d26] text-white py-20 px-6 md:px-12 lg:px-24">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          {/* Text Section */}
+      <section className="overflow-hidden bg-[#e9e6de] text-[#17252b]">
+        <div className="mx-auto grid max-w-[1600px] md:grid-cols-2">
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.75 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex flex-col justify-center px-6 py-20 md:px-12 md:py-28 lg:px-20"
           >
-            <p
-              className="text-xs mb-4 font-bold"
-              style={{ letterSpacing: "0.08em" }}
-            >
-              PARTNER SPOTLIGHT
-            </p>
-
             <h2
-              className="text-3xl md:text-4xl leading-tight mb-6"
-              style={{
-                fontFamily: '"Roboto Serif", serif',
-                letterSpacing: "-0.5px",
-              }}
+              style={{ fontFamily: '"Roboto Serif", serif' }}
+              className="text-[clamp(2.5rem,5vw,5.2rem)] leading-[1.02] tracking-[-0.065em]"
             >
-              InvestNaija
+              Meet
+              <br />
+              InvestNaija.
             </h2>
 
-            <p
-              className="text-sm leading-relaxed mb-6"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: "-0.3px",
-              }}
-            >
+            <p className="mt-8 max-w-lg text-sm leading-8 text-[#59636a] md:text-base">
               InvestNaija is a platform designed to deepen financial inclusion
               and empower individuals to build sustainable wealth. Whether
               you're beginning your financial journey or planning for long-term
@@ -821,38 +461,37 @@ export default function HomePage() {
               tailored to your goals.
             </p>
 
-            <p
-              className="text-sm leading-relaxed mb-8"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: "-0.3px",
-              }}
-            >
+            <p className="mt-5 max-w-lg text-sm leading-8 text-[#59636a] md:text-base">
               Start investing with ease and take your financial future into your
               own hands.
             </p>
 
-            <button className="group inline-flex items-center gap-2 border border-white px-6 py-2 rounded-full text-sm font-body hover:bg-white hover:text-[#0d1d26] transition cursor-pointer">
-              Open an Account
-              <ChevronRight
-                size={16}
-                className="transition-transform duration-300 group-hover:translate-x-1"
+            <a
+              href="/contact"
+              className="group mt-9 inline-flex w-fit items-center gap-5 rounded-tl-xl rounded-br-xl rounded-tr-none rounded-bl-none bg-[#bb7332] px-6 py-4 text-sm font-medium text-white transition-colors hover:bg-[#17252b]"
+            >
+              Open an account
+              <ArrowRight
+                size={17}
+                className="transition-transform group-hover:translate-x-1"
               />
-            </button>
+            </a>
           </motion.div>
 
-          {/* Image */}
           <motion.div
-            className="flex justify-center md:justify-end"
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.1, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.85 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative flex min-h-[420px] items-center justify-center overflow-hidden bg-[#d7d3c9] px-6 pt-10 md:min-h-[680px] md:px-10"
           >
+            <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full border border-[#17252b]/10" />
+            <div className="absolute -right-10 -top-10 h-60 w-60 rounded-full border border-[#17252b]/10" />
+
             <img
               src={sectionSixImg}
-              alt="InvestNaija App"
-              className="w-full max-w-sm md:max-w-lg object-contain drop-shadow-2xl rounded-xl"
+              alt="InvestNaija investment platform"
+              className="relative z-10 max-h-[600px] w-full max-w-xl object-contain"
             />
           </motion.div>
         </div>

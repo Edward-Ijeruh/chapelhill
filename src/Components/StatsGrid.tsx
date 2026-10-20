@@ -1,7 +1,7 @@
+import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
-// Stats
 const stats = [
   {
     value: 95,
@@ -51,37 +51,68 @@ export default function StatsGrid() {
   return (
     <div
       ref={ref}
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12"
+      className="mx-auto grid max-w-7xl grid-cols-1 border-l border-t border-[#17252b]/15 sm:grid-cols-2 lg:grid-cols-3"
     >
       {stats.map((item, index) => (
-        <div
-          key={index}
-          className={`pl-6 border-l ${
-            index === 0 ? "border-gray-600" : "border-gray-300"
-          }`}
+        <motion.article
+          key={item.label}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+          className="group relative min-h-[240px] overflow-hidden border-b border-r border-[#17252b]/15 p-7 sm:p-8 lg:min-h-[270px] lg:p-10"
         >
-          <h3
-            className="text-3xl md:text-4xl font-semibold text-[#0D1B1E]"
-            style={{ fontFamily: '"Roboto Serif", serif' }}
+          <svg
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 h-full w-full"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
           >
-            <CountUp
-              key={inView ? `animate-${index}` : `stop-${index}`}
-              start={inView ? 0 : item.value}
-              end={inView ? item.value : 0}
-              duration={2}
-              suffix={item.suffix}
-              prefix={item.prefix}
+            <motion.rect
+              x="0.5"
+              y="0.5"
+              width="99"
+              height="99"
+              fill="none"
+              stroke="#17252b"
+              strokeWidth="0.45"
+              vectorEffect="non-scaling-stroke"
+              pathLength="1"
+              variants={{
+                hidden: { pathLength: 0 },
+                visible: { pathLength: 1 },
+              }}
+              transition={{
+                duration: 1.15,
+                delay: index * 0.12,
+                ease: [0.65, 0, 0.35, 1],
+              }}
             />
-          </h3>
+          </svg>
 
-          <p className="text-xs font-semibold mt-2 tracking-wide">
-            {item.label}
-          </p>
+          <div className="relative z-10 flex h-full flex-col">
+            <h3
+              className="text-4xl font-medium tracking-tight text-[#0d1d26] md:text-5xl"
+              style={{ fontFamily: '"Roboto Serif", serif' }}
+            >
+              <CountUp
+                key={inView ? `animate-${index}` : `stop-${index}`}
+                start={inView ? 0 : item.value}
+                end={inView ? item.value : 0}
+                duration={2}
+                suffix={item.suffix}
+                prefix={item.prefix}
+              />
+            </h3>
 
-          <p className="text-xs text-gray-600 mt-1 leading-relaxed">
-            {item.desc}
-          </p>
-        </div>
+            <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#17252b]">
+              {item.label}
+            </p>
+
+            <p className="mt-3 max-w-xs text-sm leading-6 text-[#17252b]/65">
+              {item.desc}
+            </p>
+          </div>
+        </motion.article>
       ))}
     </div>
   );
