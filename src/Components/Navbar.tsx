@@ -17,33 +17,34 @@ type MenuItem = {
 
 const serviceItems: ServiceItem[] = [
   {
-    title: "Investment Banking",
-    description:
-      "Strategic advice and capital solutions for businesses and institutions.",
-    link: "/services/investment-banking",
+    title: "Capital Markets",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "/services/capital-markets",
   },
   {
-    title: "Investment Management",
-    description:
-      "Disciplined investment strategies focused on long-term value.",
-    link: "/services/investment-management",
+    title: "Retirement Savings",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "/services/retirement-savings",
   },
   {
-    title: "Securities Trading & Research",
-    description: "Market access, informed research and execution expertise.",
-    link: "/services/securities-trading-research",
+    title: "Protection",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "/services/protection",
   },
   {
-    title: "Alternative Investments",
-    description:
-      "Differentiated investment opportunities across alternative asset classes.",
-    link: "/services/alternative-investments",
+    title: "Financial Technology",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "/services/financial-technology",
   },
   {
-    title: "Wealth Management",
-    description:
-      "Personalised financial strategies shaped around your ambitions and long-term objectives.",
-    link: "/services/wealth-management",
+    title: "International",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "/services/international",
+  },
+  {
+    title: "Investments",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "/services/investments",
   },
 ];
 
@@ -155,7 +156,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0d1d26] text-white shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+      className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0c232e] text-white shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
       style={{ fontFamily: '"DM Sans", sans-serif' }}
     >
       {/* Main navigation */}
@@ -295,7 +296,7 @@ export default function Navbar() {
               animate="visible"
               exit="exit"
               variants={panelVariants}
-              className="absolute inset-x-0 top-full border-t border-white/10 bg-[#0d1d26] shadow-[0_24px_50px_rgba(0,0,0,0.25)]"
+              className="absolute inset-x-0 top-full border-t border-white/10 bg-[#0c232e] shadow-[0_24px_50px_rgba(0,0,0,0.25)]"
             >
               <div className="mx-auto max-w-[1600px] px-16 py-10 xl:py-12">
                 {menuItems
@@ -438,7 +439,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "calc(100dvh - 76px)" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-x-0 top-full flex flex-col overflow-hidden border-t border-white/10 bg-[#0d1d26] lg:hidden"
+            className="absolute inset-x-0 top-full flex flex-col overflow-hidden border-t border-white/10 bg-[#0c232e] lg:hidden"
           >
             <div className="flex-1 overflow-y-auto overscroll-contain px-5 pb-8 pt-5 sm:px-8">
               <div className="divide-y divide-white/10">

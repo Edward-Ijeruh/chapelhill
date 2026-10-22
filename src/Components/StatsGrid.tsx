@@ -6,39 +6,26 @@ const stats = [
   {
     value: 95,
     suffix: "%",
-    label: "CLIENT RETENTION RATE",
-    desc: "Long-term trust built through consistent performance.",
+    label: "LOREM IPSUM DOLOR",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
   },
   {
     value: 85,
     suffix: "%",
-    label: "PORTFOLIO PERFORMANCE",
-    desc: "Strategic investment models outperforming market averages.",
+    label: "CONSECTETUR ADIPISCING",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est.",
   },
   {
     value: 100,
     suffix: "%",
-    label: "PERSONALIZED SERVICE",
-    desc: "Tailored advisory support for every client.",
+    label: "SED DO EIUSMOD",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna.",
   },
   {
     value: 12,
     suffix: "+",
-    label: "YEARS OF COMBINED EXPERTISE",
-    desc: "Seasoned financial and portfolio management experience.",
-  },
-  {
-    value: 500,
-    prefix: "₦",
-    suffix: "M+",
-    label: "ASSETS ADVISED / MANAGED",
-    desc: "Responsible guidance for capital growth and protection.",
-  },
-  {
-    value: 40,
-    suffix: "+",
-    label: "CLIENTS SERVED",
-    desc: "Trusted by private individuals and corporate teams.",
+    label: "TEMPOR INCIDIDUNT",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus.",
   },
 ];
 
@@ -51,7 +38,7 @@ export default function StatsGrid() {
   return (
     <div
       ref={ref}
-      className="mx-auto grid max-w-7xl grid-cols-1 border-l border-t border-[#17252b]/15 sm:grid-cols-2 lg:grid-cols-3"
+      className="mx-auto grid max-w-7xl grid-cols-1 border-l border-t border-white/15 bg-[#0c232e] sm:grid-cols-2"
     >
       {stats.map((item, index) => (
         <motion.article
@@ -59,7 +46,7 @@ export default function StatsGrid() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
-          className="group relative min-h-[240px] overflow-hidden border-b border-r border-[#17252b]/15 p-7 sm:p-8 lg:min-h-[270px] lg:p-10"
+          className="group relative min-h-[240px] overflow-hidden border-b border-r border-white/15 p-7 sm:p-8 lg:min-h-[270px] lg:p-10"
         >
           <svg
             aria-hidden="true"
@@ -73,7 +60,7 @@ export default function StatsGrid() {
               width="99"
               height="99"
               fill="none"
-              stroke="#17252b"
+              stroke="rgba(255,255,255,0.8)"
               strokeWidth="0.45"
               vectorEffect="non-scaling-stroke"
               pathLength="1"
@@ -91,7 +78,7 @@ export default function StatsGrid() {
 
           <div className="relative z-10 flex h-full flex-col">
             <h3
-              className="text-4xl font-medium tracking-tight text-[#0d1d26] md:text-5xl"
+              className="text-4xl font-medium tracking-tight text-white md:text-5xl"
               style={{ fontFamily: '"Roboto Serif", serif' }}
             >
               <CountUp
@@ -100,15 +87,14 @@ export default function StatsGrid() {
                 end={inView ? item.value : 0}
                 duration={2}
                 suffix={item.suffix}
-                prefix={item.prefix}
               />
             </h3>
 
-            <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#17252b]">
+            <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.14em] text-white">
               {item.label}
             </p>
 
-            <p className="mt-3 max-w-xs text-sm leading-6 text-[#17252b]/65">
+            <p className="mt-3 max-w-xs text-sm leading-6 text-white/65">
               {item.desc}
             </p>
           </div>
