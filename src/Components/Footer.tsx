@@ -9,8 +9,8 @@ const firmLinks = [
 
 const serviceLinks = [
   { label: "Capital Markets", href: "/services/capital-markets" },
-  { label: "Retirement Savings", href: "/services/retirement-savings" },
-  { label: "Protection", href: "/services/protection" },
+  { label: "Pensions", href: "/services/pensions" },
+  { label: "Insurance", href: "/services/insurance" },
   { label: "Financial Technology", href: "/services/financial-technology" },
   { label: "International", href: "/services/international" },
   { label: "Investments", href: "/services/investments" },

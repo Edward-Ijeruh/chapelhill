@@ -127,16 +127,16 @@ export default function HomePage() {
                 href: "/services/capital-markets",
               },
               {
-                title: "Retirement Savings",
+                title: "Pensions",
                 description:
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.",
-                href: "/services/retirement-savings",
+                href: "/services/pensions",
               },
               {
-                title: "Protection",
+                title: "Insurance",
                 description:
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque.",
-                href: "/services/protection",
+                href: "/services/insurance",
               },
               {
                 title: "Financial Technology",

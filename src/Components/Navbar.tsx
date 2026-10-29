@@ -22,14 +22,14 @@ const serviceItems: ServiceItem[] = [
     link: "/services/capital-markets",
   },
   {
-    title: "Retirement Savings",
+    title: "Pensions",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "/services/retirement-savings",
+    link: "/services/pensions",
   },
   {
-    title: "Protection",
+    title: "Insurance",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    link: "/services/protection",
+    link: "/services/insurance",
   },
   {
     title: "Financial Technology",
